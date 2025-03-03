@@ -57,7 +57,7 @@ public class EmployeeStreamDemo {
 
         joinedAfter2020.forEach(System.out::println);
 
-        // 3. Employees who joined after 2020 in sorted order (based on YOJ) and store in new list
+        // 3. Employees who joined after 2020 in sorted order (YOJ) and store in new list
         List<Employee> sortedJoinedAfter2020 = employees.stream()
                 .filter(emp -> emp.yoj > 2020)
                 .sorted(Comparator.comparingInt(emp -> emp.yoj))
