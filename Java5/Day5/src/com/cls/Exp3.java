@@ -1,6 +1,7 @@
 package com.cls;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.ListIterator;
 
@@ -32,6 +33,12 @@ public class Exp3 {
 		for(String dt : listNames) {
 			System.out.println(dt);
 		}
+		
+		Collections.sort(listNames);//ascending order
+		
+		Collections.sort(listNames.reversed());//reverse order
+		
+		System.out.println(listNames);
 	}
 
 }
