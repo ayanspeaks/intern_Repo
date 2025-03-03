@@ -16,6 +16,8 @@ public class Exp1 {
 		
 		RunnableImpl task = new RunnableImpl();
 		Thread thread = new Thread(task);
+		
+		task.run();
 		thread.start();
 		
 		executor.submit(task);
