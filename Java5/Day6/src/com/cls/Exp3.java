@@ -1,7 +1,9 @@
 package com.cls;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Objects;
+import java.util.TreeSet;
 
 class Book{
 	private int id;
@@ -75,23 +77,37 @@ class Book{
 				&& price == other.price;
 	}
 	
+	class NameComparator1 implements Comparator<Book>{
 	
+		@Override
+	public int compare(Book o1, Book o2) {
+		return o1.getName().compareTo(o2.getName());
+	}
 }
 
 public class Exp3 {
 	
 	public static void main(String a[]) {
-		HashSet<Book> data = new HashSet<>();
+		TreeSet<Book> data = new TreeSet<>(new NameComparator1());
 		
 		data.add(new Book(101, "Football", "Messi", 12));
-		data.add(new Book(101, "Football", "Messi", 12));
-		data.add(new Book(101, "Football", "Messi", 12));
-		data.add(new Book(101, "Football", "Messi", 12));
+		data.add(new Book(102, "java", "Mess", 15));
+		data.add(new Book(109, "Foot", "mes", 21));
+		data.add(new Book(100, "foo", "mei", 10));
 		
 		System.out.println(data);
 		
 		data.forEach(book -> System.out.println(book.getId() + " "+ book.getName()+ " " + book.getAuthor()));
 		
+		data.parallelStream()
+		.filter(bk -> bk.getPrice() >= 10 && bk.getPrice() <= 20)
+		.forEach(book -> System.out.println(book.getId() + " "+ book.getName()+ " " + book.getAuthor()));
+		
+		data.stream()
+		    .filter(book ->
+		Character.isUpperCase(book.getName().charAt(0)))
+		    .forEach(book ->
+		    System.out.println(book.getId() + " " + book.getName() + " " + book.getAuthor()));
 		
 	}
 
