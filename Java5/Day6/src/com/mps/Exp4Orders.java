@@ -168,16 +168,16 @@ public class Exp4Orders {
         List<Order> orderList = new ArrayList<>();
 
         // Creating 10 sample orders
-        orderList.add(new Order(101, "Alice",   350.0, "January",   2023, "New York",    "Electronics", 2));
-        orderList.add(new Order(102, "Bob",     120.0, "March",     2023, "Los Angeles", "Groceries",   3));
-        orderList.add(new Order(103, "Charlie", 500.0, "February",  2024, "Chicago",     "Electronics", 1));
-        orderList.add(new Order(104, "Alice",   200.0, "May",       2024, "New York",    "Clothing",    2));
-        orderList.add(new Order(105, "Eve",     100.0, "June",      2023, "Houston",     "Home",        1));
-        orderList.add(new Order(106, "Frank",   600.0, "January",   2024, "Miami",       "Electronics", 1));
-        orderList.add(new Order(107, "Gina",     80.0, "March",     2024, "Dallas",      "Groceries",   5));
-        orderList.add(new Order(108, "Henry",   300.0, "December",  2023, "Seattle",     "Furniture",   2));
-        orderList.add(new Order(109, "Ivy",     220.0, "November",  2023, "Boston",      "Electronics", 3));
-        orderList.add(new Order(110, "James",    75.0, "August",    2024, "Phoenix",     "Groceries",   4));
+        orderList.add(new Order(101, "Ayan",   350.0, "January",   2023, "Kolkata",    "Electronics", 2));
+        orderList.add(new Order(102, "Anik",     120.0, "March",     2023, "Dhaka", "Groceries",   3));
+        orderList.add(new Order(103, "Charlie", 500.0, "February",  2024, "Delhi",     "Electronics", 1));
+        orderList.add(new Order(104, "Arun",   200.0, "May",       2024, "Mumbai",    "Clothing",    2));
+        orderList.add(new Order(105, "Bubli",     100.0, "June",      2023, "Chennai",     "Home",        1));
+        orderList.add(new Order(106, "Bablu",   600.0, "January",   2024, "Pune",       "Electronics", 1));
+        orderList.add(new Order(107, "Gian",     80.0, "March",     2024, "Hyderabad",      "Groceries",   5));
+        orderList.add(new Order(108, "Ayan",   300.0, "January",  2020, "Kolkata",     "Electronics",   2));
+        orderList.add(new Order(109, "Nobita",     220.0, "November",  2023, "Punjab",      "Electronics", 3));
+        orderList.add(new Order(110, "Ashmita",    75.0, "August",    2024, "Ahmedabad",     "Groceries",   4));
 
         // 1) Find highest orders in the year
         getYearWithHighestOrders(orderList);
