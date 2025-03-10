@@ -17,16 +17,18 @@ public class RegisterServlet extends HttpServlet {
         String gender = request.getParameter("gender");
         String service = request.getParameter("services");
         String subscribe = request.getParameter("subscribe") != null ? "Yes" : "No";
+        String password = request.getParameter("password");
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/company_db", "root", "root@39");
-            PreparedStatement ps = con.prepareStatement("INSERT INTO users (name, email, gender, service, subscribe) VALUES (?, ?, ?, ?, ?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO users (name, email, gender, service, subscribe, password) VALUES (?, ?, ?, ?, ?, ?)");
             ps.setString(1, name);
             ps.setString(2, email);
             ps.setString(3, gender);
             ps.setString(4, service);
             ps.setString(5, subscribe);
+            ps.setString(6, password);
             ps.executeUpdate();
             response.getWriter().println("Registration Successful!");
         } catch (Exception e) {
