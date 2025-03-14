@@ -22,6 +22,10 @@ public class CustomerController {
 	@Autowired
 	private CustomerService service;
 	
+	public void setService(CustomerService service) {
+		this.service = service;
+	}
+	
 	@PostMapping("/create")
 	public Customer createuCustomer(@RequestBody Customer cst) {
 		return service.createCustomer(cst);

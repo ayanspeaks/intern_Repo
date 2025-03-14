@@ -9,7 +9,10 @@ import com.test.dao.CustomerDao;
 import com.test.entity.Customer;
 import com.test.repository.CustomerRepository;
 
+import jakarta.transaction.Transactional;
+
 @Repository
+@Transactional
 public class CustomerDAOImpl implements CustomerDao{
 
 	@Autowired

@@ -5,7 +5,11 @@ import org.springframework.stereotype.Repository;
 
 import com.test.entity.Customer;
 
+import jakarta.transaction.Transactional;
+import jakarta.transaction.Transactional.TxType;
+
 @Repository
+@Transactional(value = TxType.REQUIRED)
 public interface CustomerRepository extends JpaRepository<Customer, Integer>{
 	
 	
