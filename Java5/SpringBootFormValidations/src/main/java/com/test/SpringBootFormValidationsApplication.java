@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootRestApijpaQueryApplication {
+public class SpringBootFormValidationsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootRestApijpaQueryApplication.class, args);
+		SpringApplication.run(SpringBootFormValidationsApplication.class, args);
 	}
 
 }

@@ -1,22 +1,19 @@
 package com.test.repository;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension;
 import org.springframework.stereotype.Repository;
 
 import com.test.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-	
-	@Query("select u from User u where u.email = ?1")
-	User getUserByEmail(String email);
-	
-	@Query("select u from User u where u.firstName like %?1")
-	List<User> getUserByEndsWith(String firstName);
-	
-	@Query("select u from User u")
-	List<User> getAllUsers();
+
+	/*
+	@Query("select u from user u where u.firstName = ?1")
+	public User getByFirstName(String firstName) {
+		return getByFirstName(firstName);
+	}
+	*/
 }
