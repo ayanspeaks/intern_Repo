@@ -1,0 +1,13 @@
+spring:
+ application:
+  name: SpringBootMicroService1
+
+#discovery microservice
+
+eureka:
+ client:
+  service-url:
+   defaultZone: http://localhost:1111/eureka/
+   
+server:
+ port: 2222

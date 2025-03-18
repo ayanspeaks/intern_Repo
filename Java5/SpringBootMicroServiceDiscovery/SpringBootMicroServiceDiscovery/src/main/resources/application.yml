@@ -1,0 +1,17 @@
+spring:
+ application:
+  name: SpringBootMicroServiceDiscovery
+
+#EUREKA DISCOVERY SERVER CONFIGURATION
+
+eureka:
+ instance:
+  hostname: localhost
+ client:
+  register-with-eureka: false
+  fetch-registry: false
+
+server:
+ port: 1111
+
+
