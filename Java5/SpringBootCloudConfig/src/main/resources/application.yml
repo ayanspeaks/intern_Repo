@@ -1,0 +1,6 @@
+spring:
+ application:
+  name: SpringBootCloudConfig
+  
+server:
+ port: 7171
