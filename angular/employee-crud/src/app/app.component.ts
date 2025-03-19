@@ -8,7 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  data = 'MLA-INTERNS';
-
-  listSkills = ['Java', 'Python', 'Spring'];
+  title = 'employee-crud';
 }
