@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<style>
+    body {
+        background-color: skyblue;
+        color: black;
+        content: inherit;
+    }
+</style>
+
+<script>
+
+function validateForm(){
+    var username = document.mla.user.value;
+    var password = document.mla.pwd.value;
+
+    if(username == null || username == ""){
+        alert("enter your username");
+        return false;
+    }
+    else if(password.length < 8){
+        alert("your secret password minimum length is 8 characters!");
+        return false;
+    }
+}
+
+</script>
+
+<html>
+
+<body>
+    <center>
+        <h1>login page</h1>
+        <form action="#" name="mla" onsubmit="return validateForm()">
+            Enter UserName: <input type="text" name="user"><br><br>
+            Enter Password: <input type="password" name="pwd"><br><br>
+
+            <input type="submit" value="login">
+        </form>
+    </center>
+</body>
+
+</html>
