@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <p id="test"></p>
+    <p id="user"></p>
+    <p id="mla"></p>
+    <script>
+
+        // function greetUser() {
+        //     document.writeln(10 * 5);
+        //     var name = "hello test";
+        //     document.getElementById("test").innerHTML = name;
+        // }
+
+        // greetUser();
+
+        let greetUser = (a, b) => a * b;
+
+
+        document.getElementById("test").innerHTML = greetUser(30, 50);
+
+        let testuser = () => {
+            return "Test user doing or not";
+        }
+
+        document.getElementById("user").innerHTML = testuser();
+
+        let mlastd = (msg) => {
+            return msg;
+        }
+
+        document.getElementById("mla").innerHTML=mlastd("very good");
+
+    </script>
+</body>
+
+</html>
