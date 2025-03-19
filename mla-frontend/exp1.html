@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="arrayexp.js"></script>
+    <!-- <script src="exp2.js"></script> -->
+</head>
+
+<body>
+    <script>
+        var date = new Date();
+        var day = date.getDay();
+        var dt = date.getDate();
+        var month = date.getMonth();
+        var yr = date.getFullYear();
+        var hrs = date.getHours();
+
+        document.writeln(date+"<br>");
+        document.writeln("Date : "+date+"<br>");
+        document.writeln("Day : "+day+"<br>");
+        document.writeln("Month : "+month+"<br>");
+        document.writeln("Year : "+yr+"<br>");
+        document.writeln("Hour : "+hrs+"<br>");
+
+        document.getElementById("txt").innerHTML=today;
+    </script>
+
+    Current Date And Time : <span id="txt"></span>
+</body>
+
+</html>
