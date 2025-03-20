@@ -1,0 +1,46 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Sanjeev",
+      "email": "java@java.com",
+      "phone": "94929292929"
+    },
+    {
+      "id": 2,
+      "name": "harika",
+      "email": "harika@cgi.com",
+      "phone": "001-123-4568"
+    },
+    {
+      "name": "Manohar",
+      "email": "manohar@cgi.com",
+      "phone": "8980989098",
+      "id": 6
+    },
+    {
+      "name": "ponakala",
+      "email": "ponakala@cgi.com",
+      "phone": "3453453456",
+      "id": 7
+    },
+    {
+      "name": "Omsri",
+      "email": "omsri@gmail.com",
+      "phone": "123451234566",
+      "id": 8
+    },
+    {
+      "name": "wrgt",
+      "email": "erf",
+      "phone": "1",
+      "id": 9
+    },
+    {
+      "name": "sanju",
+      "email": "okvirat@69",
+      "phone": "5",
+      "id": 10
+    }
+  ]
+}
