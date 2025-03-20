@@ -12,6 +12,7 @@ import { CommonModule} from '@angular/common';
 import {NgbModal, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 //import { routes } from '../app.routes';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterOutlet } from '@angular/router';
 
 
 interface Employee {
@@ -26,6 +27,7 @@ interface Employee {
   imports: [
     CommonModule,
     ApplicationModule,
+    RouterOutlet,
     NgbModule,
     FormsModule
   ],

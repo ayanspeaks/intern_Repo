@@ -21,8 +21,8 @@
                     <tbody>
                         <tr *ngFor="let i of users">
                             <td>{{ i.id }}</td>
-                            <td>{{ i.name }}</td>
-                            <td>{{ i.email }}</td>
+                            <td>{{ i.name | lowercase}}</td>
+                            <td>{{ i.email | uppercase}}</td>
                             <td>{{ i.gender }}</td>
                             <td>
                                 <button class="btn btn-primary" (click)="editUser(i, content)" title="Edit">
@@ -59,8 +59,8 @@
                             </div>
                         </div>
                         <p>
-                            <input type="radio" value="male" name="gender" [(ngModel)]="gender"> Male
-                            <input type="radio" value="female" name="gender" [(ngModel)]="gender"> Female
+                            <input type="radio" value="Male" name="gender" [(ngModel)]="gender"> Male
+                            <input type="radio" value="Female" name="gender" [(ngModel)]="gender"> Female
                         </p>
                         <div>
                             <div class="text-center">
