@@ -1,0 +1,74 @@
+<h3 style="text-align: center; color: #333; font-family: 'Arial', sans-serif;">Create Employee</h3>
+<div class="row">
+   <div class="col-sm-4"></div>
+   <div class="col-sm-4">
+     <div [hidden]="submitted" style="max-width: 480px; margin: 30px auto; padding: 25px; border-radius: 10px; background-color: #f7f7f7; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+       <form [formGroup]="studentsaveform" #savestudent (ngSubmit)="saveStudent(saveStudent)">
+           <!-- Student Name -->
+           <div class="form-group" style="margin-bottom: 20px;">
+               <label for="name" style="font-weight: 600; color: #444; font-size: 16px;">Employee Name</label>
+               <input type="text" class="form-control" formControlName="student_name" data-toggle="tooltip"
+                   data-placement="right" title="Enter Student Name" style="border-radius: 8px; padding: 12px; font-size: 16px; border: 1px solid #ccc; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); transition: border 0.3s ease;">
+               <div class="alert alert-danger" *ngIf="(StudentName.touched) && (StudentName.invalid)"
+                  style="margin-top: 5px; border-radius: 5px;">
+                   <span *ngIf="StudentName.errors.required">Employee Name is Required</span>
+                     <span *ngIf="StudentName.errors.minlength">
+                          MinLength Error
+                      </span>
+               </div>
+           </div>
+
+           <!-- Student Email -->
+           <div class="form-group" style="margin-bottom: 20px;">
+               <label for="email" style="font-weight: 600; color: #444; font-size: 16px;">Employee Email</label>
+               <input type="email" class="form-control" formControlName="student_email"
+                  data-toggle="tooltip" data-placement="right" title="Enter Student Email"
+                  style="border-radius: 8px; padding: 12px; font-size: 16px; border: 1px solid #ccc; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); transition: border 0.3s ease;">
+                 <div class="alert alert-danger" *ngIf="(StudentEmail.touched) && (StudentEmail.invalid)"
+                  style="margin-top: 5px; border-radius: 5px;">
+                   <span *ngIf="StudentEmail.errors.required">Employee Email is Required</span>
+                     <span *ngIf="StudentEmail.errors.email">
+                          Invalid Email Format
+                      </span>
+               </div>
+           </div>
+
+           <!-- Student Branch -->
+           <div class="form-group" style="margin-bottom: 20px;">
+               <label for="branch" style="font-weight: 600; color: #444; font-size: 16px;">Employee Branch</label>
+                 <select class="form-control" formControlName="student_branch" data-toggle="tooltip"
+                        data-placement="right" title="Select Student Branch"
+                        style="border-radius: 8px; padding: 12px; font-size: 16px; border: 1px solid #ccc; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); transition: border 0.3s ease;">
+                     <option value="null">--Select Branch--</option>
+                   <option value="Government">Government</option>
+                   <option value="Corporate">Corporate</option>
+                   <option value="Public-sector">Public-sector</option>
+                   <option value="Freelancing">Freelancing</option>
+                 </select>
+           </div>
+
+           <!-- Submit Button -->
+           <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 18px; border-radius: 50px; background-color: #4CAF50; border: none; color: white; font-weight: 600; transition: background-color 0.3s ease, transform 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+             <span style="font-weight: 600;">Submit</span>
+           </button>
+       </form>
+     </div>
+   </div>
+   <div class="col-sm-4"></div>
+</div>
+
+<!-- Success Message -->
+<div class="row">
+   <div class="col-sm-4"></div>
+   <div class="col-sm-4">
+       <div [hidden]="!submitted">
+          <h4 style="color: #28a745; font-weight: bold; text-align: center; font-size: 20px;">Employee Added Successfully!</h4>
+          <!-- Add More Student Button -->
+          <button (click)="addStudentForm()" class="btn btn-success" style="padding: 14px 20px; font-size: 18px; border-radius: 50px; background-color: #28a745; color: white; border: none; font-weight: 600; transition: background-color 0.3s ease, transform 0.3s ease;">
+            <span style="font-weight: 600;">Add More Employee</span>
+          </button>
+       </div>
+   </div>
+   <div class="col-sm-4"></div>
+</div>
+
